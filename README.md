@@ -40,6 +40,58 @@ To design and implement a secure, efficient, and scalable SOHO network infrastru
 - ✅ **Tested and Verified** network connectivity across VLANs
 
 ---
+# 📡 Detailed Network Implementation - XYZ Company (SOHO Design)
+
+This document outlines the network implementation plan for XYZ Company's branch office. The design follows a **SOHO (Small Office/Home Office)** model using structured segmentation with VLANs, Inter-VLAN Routing, DHCP, and wireless setup.
+
+---
+
+## 🔸 Network Design Summary
+
+- **Router:** Cisco 2911  
+- **Switch:** Cisco 2960-24TT  
+- **Departments and VLANs:**
+  - **Admin/IT** → VLAN 10 → `192.168.1.0/26`
+  - **HR/Finance** → VLAN 20 → `192.168.1.64/26`
+  - **Customer Service/Reception** → VLAN 30 → `192.168.1.128/26`
+
+---
+
+## 📐 Subnetting Plan (Based on `192.168.1.0/24`)
+
+| VLAN | Department             | Subnet            | Range Start - End         | Broadcast       |
+|------|------------------------|-------------------|---------------------------|-----------------|
+| 10   | Admin / IT             | 192.168.1.0/26    | 192.168.1.1 - 192.168.1.62| 192.168.1.63    |
+| 20   | HR / Finance           | 192.168.1.64/26   | 192.168.1.65 - 192.168.1.126| 192.168.1.127 |
+| 30   | CS / Reception         | 192.168.1.128/26  | 192.168.1.129 - 192.168.1.190| 192.168.1.191 |
+
+---
+
+## 🛠️ Devices Configured Per VLAN
+
+### 🔹 VLAN 10 – Admin/IT
+- 1 PC (`PC0`)
+- 1 Laptop (`Laptop0`)
+- 1 Access Point (`Access Point1`) – Wireless for `Smartphone0`
+- 1 Printer (`Printer0`)
+- **Subnet:** `192.168.1.0/26`
+
+---
+
+### 🔹 VLAN 20 – Finance/HR
+- 1 PC (`PC1`)
+- 1 Laptop (`Laptop1`)
+- 1 Access Point (`Access Point0`) – Wireless for `Smartphone3`
+- 1 Printer (`Printer1`)
+- **Subnet:** `192.168.1.64/26`
+
+---
+
+### 🔹 VLAN 30 – Customer Service/Reception
+- 1 PC (`PC2`)
+- 1 Access Point (`Access Point2`) – Wireless for `Smartphone2` and `TabletPC0`
+- 1 Printer (`Printer2`)
+- **Subnet:** `192.168.1.128/26`
 
 
 ## 📌 Outcome
