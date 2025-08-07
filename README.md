@@ -93,6 +93,8 @@ This document outlines the network implementation plan for XYZ Company's branch 
 - 1 Printer (`Printer2`)
 - **Subnet:** `192.168.1.128/26`
 
+## Network Topology
+<img width="2636" height="1162" alt="image" src="https://github.com/user-attachments/assets/134bc2e4-c78d-41b7-88b5-a16387061b58" />
 
 ## 📌 Outcome
 
