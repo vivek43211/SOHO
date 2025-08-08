@@ -10,7 +10,7 @@ To expand operations, XYZ Company plans to open a branch near the local village 
 
 - One router and one switch to be used (All **CISCO** devices)
 - Three departments:
-  - **Admin/IT**
+  - **Admin/IT** 
   - **Finance/HR**
   - **Customer Service/Reception**
 - Each department must be assigned a **different VLAN**
